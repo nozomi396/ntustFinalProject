@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+
   <style>
         .bg {
             position: fixed;
@@ -24,25 +25,37 @@
              opacity: 1;
         }
     
+em  {
+  color:#2735d1;
+  text-align: center;
+  font-size: 105px;
+  margin-top: 0px;
+  line-height:235px
+
 * {
   box-sizing: border-box;
 }
-
 body {
   font-family: Arial;
   padding: 0px;
   background: #f1f1f1;
   border-style:none;
 }
-
 /* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: left;
+  background: white;
+}
+.header h1 {
+  font-size: 50px;
+}
 
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
   background-color: #333;
 }
-
 /* Style the topnav links */
 .topnav a {
   float: left;
@@ -52,15 +65,17 @@ body {
   padding: 14px 16px;
   text-decoration: none;
 }
-
 /* Change color on hover */
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
-
 /* Create two unequal columns that floats next to each other */
 /* Left column */
+.leftcolumn {   
+  float: left;
+  width: 25%;
+}
 
 /* Right column */
 .rightcolumn {
@@ -70,28 +85,24 @@ body {
   padding-left: 0px;
   font-size: 30px
 }
-
 /* Fake image */
 .fakeimg {
   background-color: #aaa;
   width: 100%;
   padding: 20px;
 }
-
 /* Add a card effect for articles */
 .card {
   background-color: white;
   padding: 1px;
   margin-top: 20px;
 }
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
 /* Footer */
 .footer {
   padding: 30px;
@@ -117,7 +128,6 @@ body {
   padding-right: 0px;
   
 }
-
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   
@@ -125,7 +135,6 @@ body {
     padding: 0;
   }
 }
-
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
   .topnav a {
@@ -133,6 +142,7 @@ body {
     width: 100%;
   }
 }
+
 img {
   opacity: 0.2;
   filter: alpha(opacity=50); /* For IE8 and earlier */
@@ -160,12 +170,14 @@ img {
 </div>
     <div class="card">
       <h3>timing countdown</h3>
-      <div class="fakeimg"style="height:300px;"><p></p></div>
+      <div class="fakeimg"style="height:300px;"> <em id="demo"></em><p></p></div>
+
+
     </div>
     <br>
 
 <div class="container">
-  <img src="https://pbs.twimg.com/media/CTD3JgUUYAE7QHs.png" alt="Nature" style="width:100%;">
+  <img src="https://pbs.twimg.com/media/CTD3JgUUYAE7QHs.png" alt="Nature" style="width:100%;>
   <div class="text-block">
     <h2>演唱會資訊</h2>
     <p>演唱會名稱：G.E.M  WORLD TOUR</p>
@@ -181,8 +193,42 @@ img {
 
 
 <div class="footer">
+
   </div>
+
+
+  <h2>All the concert ticket you want, We all have</h2>
+</div>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
 
 </body>
 </html>
-
