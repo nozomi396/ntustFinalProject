@@ -2,27 +2,40 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
+  <style>
+        .bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -999;
+            border-style:none;
+           
+
+        }
+        .bg img {
+            min-height: 100%;
+            width: 100%;
+            background-size:cover;
+             opacity: 1;
+        }
+    
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: Arial;
-  padding: 10px;
+  padding: 0px;
   background: #f1f1f1;
+  border-style:none;
 }
 
 /* Header/Blog Title */
-.header {
-  padding: 30px;
-  text-align: left;
-  background: white;
-}
-
-.header h1 {
-  font-size: 50px;
-}
 
 /* Style the top navigation bar */
 .topnav {
@@ -48,17 +61,13 @@ body {
 
 /* Create two unequal columns that floats next to each other */
 /* Left column */
-.leftcolumn {   
-  float: left;
-  width: 25%;
-}
 
 /* Right column */
 .rightcolumn {
   float: left;
-  width: 75%;
+  width: 100%;
   background-color: #f1f1f1;
-  padding-left: 30px;
+  padding-left: 0px;
   font-size: 30px
 }
 
@@ -72,7 +81,7 @@ body {
 /* Add a card effect for articles */
 .card {
   background-color: white;
-  padding: 20px;
+  padding: 1px;
   margin-top: 20px;
 }
 
@@ -85,10 +94,28 @@ body {
 
 /* Footer */
 .footer {
-  padding: 20px;
+  padding: 30px;
   text-align: center;
   background: #ddd;
-  margin-top: 20px;
+  margin-top: 30px;}
+
+.container {
+  position: relative;
+    font size: 10px;
+    font-family: Arial;
+
+}
+
+.text-block {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  background-color: none;
+  color: black;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
@@ -106,14 +133,16 @@ body {
     width: 100%;
   }
 }
+img {
+  opacity: 0.2;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+
 </style>
 </head>
 <body>
 
-<div class="header">
-  <h1>TicketGet</h1>
-  <p></p>
-</div>
 
 <div class="topnav">
   <a href="#">Link</a>
@@ -123,48 +152,36 @@ body {
 </div>
 
 <div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <div class="fakeimg" style="height:250px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:250px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-  </div>
+  
   <div class="rightcolumn">
-    <div class="card";>
-      <h2>The singer's picture</h2>
-      <div class="fakeimg" style="height:300px;">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSONeJyikXwfNAPUwcesFyxFbsmctoGy6kPg8VACdXTuRIxr9JLrA" alt="me" width="250" height="250">
+
+    <div class="bg">
+        <img src="https://pbs.twimg.com/media/C1j6niRVIAA3BjN.jpg">
 </div>
-             
-    </div>
     <div class="card">
       <h3>timing countdown</h3>
       <div class="fakeimg"style="height:300px;"><p></p></div>
     </div>
-    <div class="card"style="height:400px;">
-      <h3>Concert's information</h3>
-      <p>show's name: G.E.M Global concert</p>
-      <p>show's timing: 2019.4.27(六）下午7:00</p>
-      <p>show's location: Kaohsung Arena  (Kaohsung)</p>
-      <p>show's ticket link:......... </p>
+    <br>
 
-    </div>
+<div class="container">
+  <img src="https://pbs.twimg.com/media/CTD3JgUUYAE7QHs.png" alt="Nature" style="width:100%;">
+  <div class="text-block">
+    <h2>演唱會資訊</h2>
+    <p>演唱會名稱：G.E.M  WORLD TOUR</p>
+     <p>演唱會時間：2019.4.27(六）19:00-22:00</p>
+      <p>演唱會地點：台北小巨蛋（台北市）</p>
+       
+
+
+
   </div>
 </div>
+</body>
+
 
 <div class="footer">
-  <h2>All the concert ticket you want, We all have</h2>
-</div>
+  </div>
 
 </body>
 </html>
