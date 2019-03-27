@@ -3,7 +3,14 @@
 <head>
 	<title>TicketGet</title>
 	<link rel="stylesheet" href="css.css">
-	<script type="text/javascript"></script>
+	<script src="jquery-3.3.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#menu img:eq(0)").click(function(){
+				$("#picture img").attr("src", "3283.jpg")
+			})
+		})
+	</script>
 </head>
 
 <body>
@@ -16,12 +23,12 @@
 </ul>
 
 <div id = "all">
-	<div id= "pictures"><img src="mayday.jpg" alt = "mayday" width=100% height=700px></div>
-	<div id = "point"><img src="wpoint.png" alt = "white point"width="30px">
-	<img src="wpoint.png" alt = "white point" width="30px">
-	<img src="wpoint.png" alt = "white point" width="30px">
-	<img src="wpoint.png" alt = "white point" width="30px">
-	<img src="wpoint.png" alt = "white point" width="30px">
+	<div id= "picture"><img src="mayday.jpg" alt = "mayday" width=100% height=700px></div>
+	<div id = "point"><img src="wpoint.png" alt = "white point"width="35px">
+	<img src="wpoint.png" alt = "white point" width="35px">
+	<img src="wpoint.png" alt = "white point" width="35px">
+	<img src="wpoint.png" alt = "white point" width="35px">
+	<img src="wpoint.png" alt = "white point" width="35px">
 	</div>
 </div>
 
