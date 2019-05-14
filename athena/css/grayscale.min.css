@@ -10,7 +10,7 @@
  #mainNav .navbar-toggler{
  	font-size:80%;
  	padding:.75rem;
- 	color:#64a19d;
+ 	color:white;
  	border:1px
  	solid #64a19d
  }
@@ -34,6 +34,179 @@
  #mainNav .navbar-nav .nav-item:focus{
  	outline:0;
  	}
+
+
+
+
+/*! 老鷹*/
+
+
+.page-main {
+    position: relative;
+    z-index:0
+}
+.page-main ul li a{
+    color:#fff;
+    text-decoration: none;
+}
+.page-main ul li a:hover{
+    color:#8595ff;
+    text-decoration: none;
+}
+.page-main > aside {
+    background-color: rgba(0,0,0);
+    width: 350px;
+    height: 100%;
+    top: 0;
+    right: -350px;
+    position: fixed;
+}
+
+.page-main > aside ul {
+    margin: 0;
+    padding: 0;
+    top: 50px;
+    right: 114px;
+    position: absolute;
+}
+
+.page-main > aside li {
+    margin: 0 0 20px;
+    list-style: none;
+}
+
+.page-main > aside button {
+    background-color: rgba(0,0,0);
+    display: block;
+    position: absolute;
+    top: 150px;
+    right: 350px;
+    width: 52px;
+    height: 132px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+
+
+
+
+/*! 圓圓*/
+
+.nav ul {
+  display: none;
+}
+
+.nav-tgl {
+	opacity: .8;
+  display: inline-block;
+  cursor: pointer;
+  position: fixed;
+  z-index: 100;
+  right: 30px;
+  top: 80px;
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.24);
+  line-height: 0.6;
+  text-align: center;
+}
+.nav-tgl:hover{
+	opacity: 1
+}
+.nav-tgl:active{
+	opacity: 1
+}
+.nav-tgl > span {
+  display: inline-block;
+  position: relative;
+  height: 2px;
+  width: 34px;
+  border-radius: 1px;
+  background: #293335;
+  vertical-align: middle;
+}
+.nav-tgl > span:before, .nav-tgl > span:after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  height: 2px;
+  border-radius: 1px;
+  background: #293335;
+  transition: all 200ms;
+}
+.nav-tgl > span:before {
+  top: -11px;
+  left: 3px;
+  width: 28px;
+}
+.nav-tgl > span:after {
+  top: 11px;
+  left: 6px;
+  width: 22px;
+}
+.nav-tgl:focus {
+  outline: none;
+}
+.nav-tgl:hover > span:after, .nav-tgl:hover > span:before {
+  width: 34px;
+  left: 0;
+}
+
+.nav:before {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 600px;
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  transition: all 500ms ease-in-out;
+  clip-path: circle(30px at calc(100% - 65px) 65px);
+  visibility: hidden;
+}
+
+.menu.active .nav:before {
+  visibility: visible;
+  clip-path: circle(100%);
+}
+.menu.active .nav-tgl > span {
+  height: 0;
+}
+.menu.active .nav-tgl > span:after, .menu.active .nav-tgl > span:before {
+  top: 0px;
+  left: 0;
+  width: 34px;
+}
+.menu.active .nav-tgl > span:after {
+  transform: rotate(-45deg);
+}
+.menu.active .nav-tgl > span:before {
+  transform: rotate(45deg);
+}
+
+
+
+
+
+
+
 
 
 .container-2{
@@ -105,23 +278,23 @@
 		color:rgba(255,255,255,1)
 	}
 	#mainNav .nav-link:active{
-		color:#fff
+		color:white
 	}
 	#mainNav.navbar-shrink{
 	}
  	#mainNav.navbar-shrink .navbar-brand{
- 		color:#161616
+ 		color:rgba(255,255,255,.8)
  	}
  	#mainNav.navbar-shrink .nav-link{
- 		color:#161616;
+ 		color:rgba(255,255,255,.8);
  		padding:1.5rem 1.5rem 1.25rem;
  		border-bottom:.25rem solid transparent
  	}
  	#mainNav.navbar-shrink .nav-link:hover{
- 		color:rgb(103,151,254)
+ 		color:rgb(255,255,255)
  	}
  	#mainNav.navbar-shrink .nav-link:active{
- 		color:rgb(103,151,254);
+ 		color:rgb(255,255,255);
  	}
  	#mainNav.navbar-shrink .nav-link.active{
  		color:white;
@@ -239,7 +412,7 @@
 
 
 .about-section{
-	padding-top:10rem;
+	padding-top:13rem;
 	background:rgb(14, 20, 42);
 }
 .about-section h2{
@@ -258,7 +431,7 @@
 
 
 .projects-section{
-	padding:10rem 0
+	padding:5rem 0
 }
 
 .projects-section .featured-text{
@@ -268,7 +441,7 @@
 @media (min-width:992px){
 	.projects-section .featured-text{
 		padding:0 0 0 2rem;
-		border-left:.5rem solid #64a19d
+		border-left:.5rem solid white
 		}
 }
 
@@ -281,10 +454,18 @@
 	.projects-section .project-text{
 		padding:5rem
 	}
-	.projects-section .project-text hr{
-		border-color:#64a19d;border-width:.25rem;width:30%
+
+	.project-text-left{
+		position: relative;
+		left:-80px;
+	}
+	.project-text-right{
+		position: relative;
+		right:-80px;
 	}
 }
+
+
 
 body{
 	font-family:Nunito;

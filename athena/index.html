@@ -20,10 +20,27 @@
 
   <!-- Custom styles for this template -->
   <link href="css/grayscale.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="side_nav.css">
+
+
 
 </head>
 
 <body id="page-top">
+
+  <!-- Side-nav -->
+  <div class="page-main menu" role="main">
+    <button class=" qq nav-tgl" type="button" aria-label="toggle menu"><span aria-hidden="true"></span></button>
+    <nav class="nav">
+        <aside>
+            <ul>
+                <li><a href="#">about</a></li>
+                <li><a href="#">Love</a></li>
+                <li><a href="#">Buy</a></li>
+            </ul>
+        </aside>
+    </nav>
+  </div>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -122,7 +139,7 @@
 
       </div>
       </div>
-      <br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br>
   </section>
 
   <!-- Projects Section -->
@@ -132,15 +149,14 @@
       <!-- Project One Row -->
       <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
         <div class="col-lg-6">
-          <img class="img-fluid" src="img/demo-image-01.jpg" alt="">
+          <img class="img-fluid" style="width: 250px" src="img/demo-image-01.jpg" alt="">
         </div>
         <div class="col-lg-6">
-          <div class="bg-black text-center h-100 project">
+          <div class="bg-blackh-100 project">
             <div class="d-flex h-100">
-              <div class="project-text w-100 my-auto text-center text-lg-left">
+              <div class="project-text w-100 my-auto text-center text-lg-left project-text-left">
                 <h4 class="text-white">Misty</h4>
                 <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
-                <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
             </div>
           </div>
@@ -150,15 +166,48 @@
       <!-- Project Two Row -->
       <div class="row justify-content-center no-gutters">
         <div class="col-lg-6">
-          <img class="img-fluid" src="img/demo-image-02.jpg" alt="">
+          <img class="img-fluid" style="width: 350px" src="img/demo-image-02.jpg" alt="">
         </div>
         <div class="col-lg-6 order-lg-first">
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
-              <div class="project-text w-100 my-auto text-center text-lg-right">
+              <div class="project-text w-100 my-auto text-center text-lg-right project-text-right">
                 <h4 class="text-white">Mountains</h4>
                 <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
-                <hr class="d-none d-lg-block mb-0 mr-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6">
+          <img class="img-fluid" style="width: 350px" src="img/o.jpg" alt="">
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-blackh-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left project-text-left">
+                <h4 class="text-white">Misty</h4>
+                <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Two Row -->
+      <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6">
+          <img class="img-fluid" style="width: 350px" src="img/demo-image-02.jpg" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right project-text-right">
+                <h4 class="text-white">Mountains</h4>
+                <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
               </div>
             </div>
           </div>
@@ -184,6 +233,28 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/grayscale.min.js"></script>
+
+  <script>
+        $(function() {
+    // 
+    var duration = 300;
+
+    // aside ----------------------------------------
+    var $aside = $('.page-main > aside');
+    var $asidButton = $aside.find('.qq')
+        .on('click', function() {
+            $aside.toggleClass('open');
+            if ($aside.hasClass('open')) {
+                $aside.stop(true).animate({ right: '-70px' }, duration, 'easeOutBack');
+                $asidButton.find('img').attr('src', 'https://c2.staticflickr.com/6/5635/31065147822_9b6e31ab5f_o.png');
+            } else {
+                $aside.stop(true).animate({ right: '-350px' }, duration, 'easeInBack');
+                $asidButton.find('img').attr('src', 'https://c2.staticflickr.com/6/5555/31208490685_5c55f2f28f_o.png');
+            };
+        });
+
+  });
+  </script>
 
 </body>
 
