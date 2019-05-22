@@ -256,6 +256,12 @@
 .projects-section .featured-text{
 	padding:2rem
 }
+.project-img{
+	position: relative;
+	left: 20px;
+	-webkit-clip-path: circle(50% at 50% 50%);
+	clip-path: circle(50% at 50% 50%);
+}
 
 @media (min-width:992px){
 	.projects-section .featured-text{
@@ -266,7 +272,7 @@
 
 .projects-section .project-text{
 	padding:3rem;
-	font-size:90%
+	font-size:17px
 }
 
 @media (min-width:992px){
