@@ -177,10 +177,11 @@
               <hr class="my-4">
               <div class="small text-black-50">
                 <a>還在辛苦地找上次瀏覽的演唱會資訊嗎？加入收藏吧，下次我們帶你去！</a>
-                </div>
+              </div>
             </div>
           </div>
         </div>
+        
       </div>
       </div>
       <br><br><br><br><br><br><br><br>
@@ -285,8 +286,8 @@
     <script>
     $(function() {
         var href = $(".nav>aside>div>ul>li:has(ul)>a").attr('href');
-        $(".nav>aside>ul>li:has(ul)>a").after('<a href="' + href + '"" class="menu-plus">+</a>'); //第二層
-        $(".nav>aside>ul>li>ul>li:has(ul)>a").after('<a href="' + href + '"" class="menu-plus">+</a>'); //第三層
+        $(".nav>aside>ul>li:has(ul)>a").after('<a href="' + href + '"" class="menu-plus"><i class="fas fa-angle-right"></i></a>'); //第二層
+        $(".nav>aside>ul>li>ul>li:has(ul)>a").after('<a href="' + href + '"" class="menu-plus"><i class="fas fa-angle-right"></i></a>'); //第三層
 
         $(".nav>aside>#nav-btn").click(function() {
             $(".nav>aside>ul").slideToggle();
@@ -310,14 +311,13 @@
     </script>
 
 
-<!--
     <script>
         $(function() {
     // 
     var duration = 300;
 
     // aside ----------------------------------------
-    var $aside = $('.nav > nav-tgl');
+    var $aside = $('.nav > aside > nav-tgl');
     var $asidButton = $aside.find('.qq')
         .on('click', function() {
             $aside.toggleClass('open');
@@ -332,7 +332,8 @@
 
 });
 </script>
--->
+
+
 
 </body>
 
