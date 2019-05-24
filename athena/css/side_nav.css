@@ -183,9 +183,6 @@ border: 0;
 
 
 @media (min-width: 768px) {
-#nav-btn,.sub-menu{
-display: none;
-}
 .nav>aside>.menu {
 display: block !important;
 }
@@ -196,10 +193,5 @@ margin-left:15px;
 padding-left: 15px;
 line-height: 3.3em;
 border-bottom: solid 1px #333;
-}
-}
-@media (max-width: 768px) {
-.nav>aside>ul,.sub-menu{
-display: none;
 }
 }
