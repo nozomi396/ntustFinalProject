@@ -23,6 +23,7 @@
 
   <!--側邊選單的css-->
   <link rel="stylesheet" type="text/css" href="css/side_nav.css">
+  <link rel="stylesheet" type="text/css" href="css/star.css">
 
 
 </head>
@@ -93,6 +94,29 @@
     </nav>
   </div>
 
+
+<!-- 收藏 -->
+  <h3 onclick="document.getElementById('menu').className = 'menu menu_active'">&lt;menu/&gt;</h3>
+    <nav class="menu" id="menu">
+        <p onclick="document.getElementById('menu').className = 'menu'">&lt;close/&gt;</p>
+        <ol>
+            <li class="menu-item"><a href="#0">Home</a>
+                <ol class="sub-menu"></ol>
+            </li>
+            <li class="menu-item"><a href="#0">About</a>
+                <ol class="sub-menu"></ol>
+            </li>
+            <li class="menu-item">
+                <a href="#0">Widgets</a>
+            </li>
+            <li class="menu-item">
+                <a href="#0">Kabobs</a>
+            </li>
+            <li class="menu-item"><a href="#0">Contact</a>
+                <ol class="sub-menu"></ol>
+            </li>
+        </ol>
+    </nav>
 
 
   <!-- Navigation -->
@@ -357,6 +381,22 @@
 
 });
 </script>
+
+
+    <link href="css/menu.css" rel="stylesheet">
+    <script>
+    $(document).ready(function() {
+
+        for (i = 0; i < $('.menu-item').length; i++) {
+            $('.sub-menu').slideUp(0)
+            $('.menu-item:eq(' + i + ')').click({ id: i }, function(e) {
+                n = e.data.id
+                $('.sub-menu:eq(' + n + ')').slideToggle()
+                $('.sub-menu:not(:eq(' + n + '))').slideUp()
+            })
+        }
+    })
+    </script>
 
 
 
