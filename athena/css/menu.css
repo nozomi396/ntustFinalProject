@@ -1,103 +1,48 @@
-
-body {
-    overflow:auto;
-    height:3000px;
+.star{
+    width: 90px;
 }
-
+h3 {
+    position: fixed;
+    left: 30px;
+    bottom: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index:99;
+}
 a {
-    color: inherit;
+    color:white;
     text-decoration: none;
 }
-
+p {
+    float: right;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    transition: all 0.2s;
+}
 nav.menu {
-    line-height: 1.4;
-    font-family: "Space Mono", monospace;
-    background: #1d1f20;
-    padding: 25px 35px;
-    width: 30%;
-    height: 80%;
-    bottom: 0;
     position: fixed;
-    left: 0;
-    border-radius: 16px;
+    line-height: 1.4;
+    background: black;
+    padding: 20px 20px;
+    width: 20%;
+    height: 50%;
+    bottom: 0;
+    left: 20px;
+    border-radius: 15px;
     box-shadow: 0 0 60px -15px black;
-    transform: scale(0) rotate(360deg);
+    transform: scale(0) rotate(0deg);
     transition: all 0.75s;
     font-size: 18px
     color:white;
     overflow:auto;
-    z-index:9999
+    z-index:99
 
 }
-
 nav.menu_active {
-    transform: scale(1) rotate(0deg);
-}
-
-nav.menu > ol > li {
-    margin: 20px 0;
-    color:#dd925f;
-}
-
-
-nav.menu > ol > li > ol {
-    margin: 10px 0 0 20px;
-    border-left: 1px solid $grey;
-    color: #ae94c0;
-}
-
-nav.menu > ol > li > ol > li {
-    margin: 7px 0;
-    padding-left: 20px;
-}
-
-nav.menu a:hover {
-    color: #dd925f;
-}
-
-h3 {
-    position: fixed;
-    left: 0;
-    font-family: "Roboto Mono", monospace;
-    font-size: 60px;
-    color: white;
-    bottom: 0;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-size: 30px;
-     z-index:9999;
-}
-
-h3:hover {
-    border-bottom: 6px dotted #cfd8dc;
-    padding-bottom: 10px;
-    bottom: 0px;
-     z-index:9999;
-}
- 
-p {
-    font-family: "Roboto Mono", monospace;
-    float: right;
-    cursor: pointer;
-    font-size: 16px;
-    color: #cfd8dc;
-    transition: all 0.2s;
-}
-
-p:hover {
-    border-bottom: 2px dotted #cfd8dc;
-    padding-bottom: 5px
-}
-
-
-
-/*
-.slide-in-fwd-bottom {
     -webkit-animation: slide-in-fwd-bottom 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
             animation: slide-in-fwd-bottom 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-
-
 @-webkit-keyframes slide-in-fwd-bottom {
   0% {
     -webkit-transform: translateZ(-1400px) translateY(800px);
@@ -122,5 +67,3 @@ p:hover {
     opacity: 1;
   }
 }
-*/
-
