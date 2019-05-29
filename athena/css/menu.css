@@ -1,13 +1,13 @@
 .star{
-    width: 90px;
+    width: 75px;
+    opacity: 0.8;
 }
 h3 {
     position: fixed;
     left: 30px;
-    bottom: 0;
+    bottom: 10px;
     cursor: pointer;
-    transition: all 0.3s;
-    z-index:99;
+    z-index:999;
 }
 a {
     color:white;
@@ -18,21 +18,18 @@ p {
     cursor: pointer;
     font-size: 16px;
     color: white;
-    transition: all 0.2s;
 }
 nav.menu {
     position: fixed;
-    line-height: 1.4;
-    background: black;
+    background: rgb(0, 0, 0, 0.8);
     padding: 20px 20px;
     width: 20%;
-    height: 50%;
-    bottom: 0;
-    left: 20px;
-    border-radius: 15px;
+    height: 150px;
+    top: 460px;
+    left: 30px;
+    border-radius: 10px;
     box-shadow: 0 0 60px -15px black;
     transform: scale(0) rotate(0deg);
-    transition: all 0.75s;
     font-size: 18px
     color:white;
     overflow:auto;
@@ -65,5 +62,35 @@ nav.menu_active {
     -webkit-transform: translateZ(0) translateY(0);
             transform: translateZ(0) translateY(0);
     opacity: 1;
+  }
+}
+
+
+nav.menu_deactive {
+    -webkit-animation: slide-out-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            animation: slide-out-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@-webkit-keyframes slide-out-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+  }
+}
+@keyframes slide-out-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
   }
 }

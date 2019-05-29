@@ -24,6 +24,7 @@
   <!--側邊選單的css-->
   <link rel="stylesheet" type="text/css" href="css/side_nav.css">
   <link rel="stylesheet" type="text/css" href="css/star.css">
+  <link href="css/menu.css" rel="stylesheet">
 
 
 </head>
@@ -95,25 +96,11 @@
 
 
 <!-- 收藏 -->
-  <h3 onclick="document.getElementById('menu').className = 'menu menu_active'"><img class="star" src="img/star.png"></h3>
+  <h3 id="collection"><img class="star" src="img/star.png"></h3>
     <nav class="menu" id="menu">
-        <p onclick="document.getElementById('menu').className = 'menu'">close/</p>
         <ul>
-            <li class="menu-item"><a href="#0">Home</a>
-                <ol class="sub-menu"></ol>
-            </li>
-            <li class="menu-item"><a href="#0">About</a>
-                <ol class="sub-menu"></ol>
-            </li>
-            <li class="menu-item">
-                <a href="#0">Widgets</a>
-            </li>
-            <li class="menu-item">
-                <a href="#0">Kabobs</a>
-            </li>
-            <li class="menu-item"><a href="#0">Contact</a>
-                <ol class="sub-menu"></ol>
-            </li>
+            <li><a href="#0">Home</a></li>
+            <li><a href="#0">About</a></li>
         </ul>
     </nav>
 
@@ -232,7 +219,7 @@
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left project-text-left">
                 <h4 class="text-white">林郁蓁</h4>
-                <p class="mb-0 text-white-50">" 底下的都在耍笨，只有我不笨。"</p>
+                <h6 class="mb-0 text-white-50">" 底下的都在耍笨，只有我不笨。"</h6>
               </div>
             </div>
           </div>
@@ -249,7 +236,7 @@
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-right project-text-right">
                 <h4 class="text-white">顏易民</h4>
-                <p class="mb-0 text-white-50">" 鄭傑宇都在雷，我沒有。"</p>
+                <h6 class="mb-0 text-white-50">" 鄭傑宇都在雷，我沒有。"</h6>
               </div>
             </div>
           </div>
@@ -266,7 +253,7 @@
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left project-text-left">
                 <h4 class="text-white">姜學穎</h4>
-                <p class="mb-0 text-white-50">＂夾在中間不知所措。＂</p>
+                <h6 class="mb-0 text-white-50">＂夾在中間不知所措。＂</h6>
               </div>
             </div>
           </div>
@@ -283,7 +270,7 @@
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-right project-text-right">
                 <h4 class="text-white">鄭傑宇</h4>
-                <p class="mb-0 text-white-50">＂顏易民是肥宅，我不是。＂</p>
+                <h6 class="mb-0 text-white-50">＂顏易民是肥宅，我不是。＂</h6>
               </div>
             </div>
           </div>
@@ -380,21 +367,16 @@
 });
 </script>
 
-
-    <link href="css/menu.css" rel="stylesheet">
-    <script>
-    $(document).ready(function() {
-
-        for (i = 0; i < $('.menu-item').length; i++) {
-            $('.sub-menu').slideUp(0)
-            $('.menu-item:eq(' + i + ')').click({ id: i }, function(e) {
-                n = e.data.id
-                $('.sub-menu:eq(' + n + ')').slideToggle()
-                $('.sub-menu:not(:eq(' + n + '))').slideUp()
-            })
+<script type="text/javascript">
+  $('#collection').click(function() {
+    if ($('#menu').attr('class') == 'menu') {
+      $('#menu').addClass('menu_active');
+      } else {
+        $('#menu').addClass('menu_deactive');
+        $('#menu').attr('class', 'menu');
         }
-    })
-    </script>
+      })
+</script>
 
 
 
