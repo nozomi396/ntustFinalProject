@@ -23,7 +23,6 @@
 
   <!--側邊選單的css-->
   <link rel="stylesheet" type="text/css" href="css/side_nav.css">
-  <link rel="stylesheet" type="text/css" href="css/star.css">
   <link href="css/menu.css" rel="stylesheet">
 
 
@@ -372,9 +371,12 @@
   $('#collection').click(function() {
     if ($('#menu').attr('class') == 'menu') {
       $('#menu').addClass('menu_active');
+      }else if ($('#menu').attr('class') == 'menu menu_deactive'){
+        $('#menu').removeClass('menu_deactive');
+        $('#menu').addClass('menu_active');
       } else {
+        $('#menu').removeClass('menu_active');
         $('#menu').addClass('menu_deactive');
-        $('#menu').attr('class', 'menu');
         }
       })
 </script>
