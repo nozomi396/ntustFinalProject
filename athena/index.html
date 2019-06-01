@@ -11,19 +11,19 @@
   <title>Ticket Get</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Varela+Round' %}" rel="stylesheet">
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i' %}" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/grayscale.min.css" rel="stylesheet">
+  <link href="{% static 'css/grayscale.min.css' %}" rel="stylesheet">
 
   <!--側邊選單的css-->
-  <link rel="stylesheet" type="text/css" href="css/side_nav.css">
-  <link href="css/menu.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/side_nav.css' %}">
+  <link href="{% static 'css/menu.css' %}" rel="stylesheet">
 
 
 </head>
@@ -32,7 +32,7 @@
 
 <body id="page-top">
 
-  <!-- Side-nav -->
+<!-- Side-nav -->
   <div class="page-main menu" role="main">
     <button class="qq nav-tgl" type="button" aria-label="toggle menu"><span aria-hidden="true"></span></button>
     <nav class="nav">
@@ -43,20 +43,17 @@
                     <ul class="sub-menu">
                         <li><a>女歌手</a>
                             <ul class="sub-menu">
-                                <li><a href="#">蔡依林</a></li>
-                                <li><a href="#">田馥甄</a></li>
+                                <li><a href="#">白安</a></li>
                             </ul>
                         </li>
                         <li><a>男歌手</a>
                             <ul class="sub-menu">
-                                <li><a href="#">林俊傑</a></li>
-                                <li><a href="#">蕭敬騰</a></li>
+                                <li><a href="#">蕭秉治</a></li>
                             </ul>
                         </li>
                         <li><a>團體</a>
                             <ul class="sub-menu">
-                                <li><a href="#">獅子合唱團</a></li>
-                                <li><a href="#">TFBOYS</a></li>
+                                <li><a href="#">八三夭</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -66,27 +63,39 @@
                     <ul class="sub-menu">
                         <li><a>女歌手</a>
                             <ul class="sub-menu">
-                                <li><a href="#">太妍</a></li>
-                                <li><a href="#">IU</a></li>
+                                <li><a href="#">Aimer</a></li>
                             </ul>
                         </li>
                         <li><a>男歌手</a>
                             <ul class="sub-menu">
-                                <li><a href="#">GD</a></li>
-                                <li><a href="#">太陽</a></li>
+                                <li><a href="#">飛鳥涼</a></li>
                             </ul>
                         </li>
                         <li><a>團體</a>
                             <ul class="sub-menu">
-                                <li><a href="#">BIG BANG</a></li>
+                                <li><a href="#">早安少女組</a></li>
                                 <li><a href="#">BTS</a></li>
-                                <li><a href="#">Super Junior</a></li>
-                                <li><a href="#">EXO</a></li>
-                                <li><a href="#">GOT7</a></li>
+                                <li><a href="#">MAMAMOO</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
+
+                <li><a>歐美</a>
+                    <ul class="sub-menu">
+                        <li><a>男歌手</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Shawn Mendes</a></li>
+                            </ul>
+                        </li>
+                        <li><a>團體</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">WestLife</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
             </ul>
         </aside>
     </nav>
@@ -95,12 +104,12 @@
 
 
 <!-- 收藏 -->
-  <h3 id="collection"><img class="star" src="img/star.png"></h3>
+  <h3 id="collection"><img class="star" src="{% static 'img/star.png' %}"></h3>
     <nav class="menu" id="menu">
         <ul>
-            <li><div><a href="#0"><img style="width: 60px; height: 60px; padding: 5px;" src="img/ex.jpg">Home</a></div></li>
-            <li><div><a href="#0"><img style="width: 60px; height: 60px; padding: 5px;" src="img/ex.jpg">About</a></div></li>
-            <li><div><a href="#0"><img style="width: 60px; height: 60px; padding: 5px;" src="img/ex.jpg">Contact</a></div></li>
+            <li><div><a href="#0"><img style="width: 60px; height: 60px; padding: 5px;" src="{% static 'img/ex.jpg' %}">Home</a></div></li>
+            <li><div><a href="#0"><img style="width: 60px; height: 60px; padding: 5px;" src="{% static 'img/ex.jpg' %}">About</a></div></li>
+            <li><div><a href="#0"><img style="width: 60px; height: 60px; padding: 5px;" src="{% static 'img/ex.jpg' %}">Contact</a></div></li>
         </ul>
     </nav>
 
@@ -138,7 +147,7 @@
       <div class="mx-auto text-center">
         <h1 class="mx-auto my-0 text-uppercase">Ticket <br>Get</h1><br>
         <h2 class="text-white-50 mx-auto mt-2 mb-5">We provide latest information of all concerts around the world.</h2>
-        <a href="#about" class="js-scroll-trigger" id="slide-bottom"><img src="wpoint.png" width="180px"></a>
+        <a href="#about" class="js-scroll-trigger" id="slide-bottom"><img src="{% static 'wpoint.png' %}" width="180px"></a>
       </div>
     </div>
   </header>
@@ -212,7 +221,7 @@
       <!-- Project One Row -->
       <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
         <div class="col-lg-6">
-          <img class="project-img" style="width: 250px" src="img/demo-image-01.jpg" alt="">
+          <img class="project-img" style="width: 250px" src="{% static 'img/demo-image-01.jpg' %}" alt="">
         </div>
         <div class="col-lg-6">
           <div class="bg-blackh-100 project">
@@ -229,7 +238,7 @@
       <!-- Project Two Row -->
       <div class="row justify-content-center no-gutters">
         <div class="col-lg-6">
-          <img class="project-img" style="width: 250px" src="img/demo-image-02.jpg" alt="">
+          <img class="project-img" style="width: 250px" src="{% static 'img/demo-image-02.jpg' %}" alt="">
         </div>
         <div class="col-lg-6 order-lg-first">
           <div class="bg-black text-center h-100 project">
@@ -246,7 +255,7 @@
 
       <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
         <div class="col-lg-6">
-          <img class="project-img" style="width: 250px" src="img/demo-image-03.jpg" alt="">
+          <img class="project-img" style="width: 250px" src="{% static 'img/demo-image-03.jpg' %}" alt="">
         </div>
         <div class="col-lg-6">
           <div class="bg-blackh-100 project">
@@ -263,7 +272,7 @@
       <!-- Project Two Row -->
       <div class="row justify-content-center no-gutters">
         <div class="col-lg-6">
-          <img class="project-img" style="width: 250px" src="img/demo-image-04.jpg" alt="">
+          <img class="project-img" style="width: 250px" src="{% static 'img/demo-image-04.jpg' %}" alt="">
         </div>
         <div class="col-lg-6 order-lg-first">
           <div class="bg-black text-center h-100 project">
@@ -288,14 +297,14 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
   <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/grayscale.min.js"></script>
+  <script src="{% static 'js/grayscale.min.js' %}"></script>
 
   <!--側邊選單的js-->
 
